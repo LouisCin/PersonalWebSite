@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: darkgrey;
+      }
+      .flex {
+        display: flex;
+      }
+      .whitebackground {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .flexdirectioncolumn {
+        flex-direction: column;
+      }
+      .mg {
+        margin: 4px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgl8 {
+        margin-left: 8px;
+      }
+      .yinying {
+        box-shadow: 2px 2px 2px 1px rgba(5, 150, 218, 0.473);
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 3px solid rgba(96, 191, 255, 0.425);
+
+        font-size: 18px;
+        color: rgba(96, 191, 255, 0.425);
+      }
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJu {
+          flex-direction: column;
+        }
+        .youQu {
+          margin-left: 4px;
+        }
+        .shujuKuai {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div
+      style="width: 200px; margin: 0 4px 0 0; z-index: 1"
+      class="whitebackground flexdirectioncolumn ceBian"
+    >
+      <!-- 头像 -->
+      <div
+        style="
+          margin: 1%;
+          border: 2px solid rgba(62, 169, 231, 0.76);
+          align-items: center;
+          justify-content: center;
+        "
+        ;
+        class="flex flexdirectioncolumn"
+      >
+        <img src="./abi.jpg" alt="头像" width="20%" height="20%" />
+        <div>彼门永存</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flexdirectioncolumn daohang">导航地址</div>
+      <div class="flexdirectioncolumn daohang">导航地址</div>
+      <div class="flexdirectioncolumn daohang">导航地址</div>
+      <div class="flexdirectioncolumn daohang">导航地址</div>
+      <div class="flexdirectioncolumn daohang">导航地址</div>
+    </div>
+    <!-- 主要内容框 -->
+    <div class="flex1">
+      <!-- 头部栏 -->
+      <div
+        style="height: 60px; margin: 0 0 4px 4px; z-index: 2"
+        class="whitebackground"
+      ></div>
+      <!-- 内容栏 -->
+      <div
+        style="overflow: auto; height: calc(100vh - 60px - 4px)"
+        class="flex flex1 neiRong"
+      >
+        <!-- 左半内容 -->
+        <div style="flex: 75%" class="flexdirectioncolumn shuJu">
+          <!-- 数据区域 -->
+          <div class="flex">
+            <!-- 数据1 -->
+            <div
+              style="height: 100px"
+              class="shujuKuai flex1 whitebackground yinying mg"
+            ></div>
+            <!-- 数据2 -->
+            <div
+              style="height: 100px"
+              class="shujuKuai flex1 whitebackground yinying mg"
+            ></div>
+            <!-- 数据3 -->
+            <div
+              style="height: 100px"
+              class="shujuKuai flex1 whitebackground yinying mg"
+            ></div>
+            <!-- 数据4 -->
+            <div
+              style="height: 100px"
+              class="shujuKuai flex1 whitebackground yinying mg"
+            ></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flexdirectioncolumn">
+            <!-- 列表项1 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项2 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项3 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项5 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项6 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项7 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项8 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项9 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+            <!-- 列表项10 -->
+            <div style="height: 160px" class="whitebackground yinying mg"></div>
+          </div>
+        </div>
+        <!-- 右半内容 -->
+        <div style="flex: 25%" class="flexdirectioncolumn youQu">
+          <!-- 消息区域 -->
+          <div style="height: 300px" class="whitebackground yinying mg"></div>
+          <!-- 提示区域 -->
+          <div style="height: 300px" class="whitebackground yinying mg"></div>
+          <!-- 消息区域 -->
+          <div style="height: 300px" class="whitebackground yinying mg"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
